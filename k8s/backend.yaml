@@ -3,13 +3,15 @@ kind: Deployment
 metadata:
   name: backend
 spec:
+  selector:  # The selector field defines how the deployment finds which pod to manage       
+    matchLabels:
+      app: backend
   replicas: 1
   template:
     metadata:
       labels:
         app: demo
         tier: backend
-        track: stable
     spec:
       containers:
         - name: backend
