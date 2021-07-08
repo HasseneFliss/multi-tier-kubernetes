@@ -3,16 +3,18 @@ kind: Deployment
 metadata:
   name: frontend
 spec:
+  selector:  # The selector field defines how the deployment finds which pod to manage       
+    matchLabels:
+      app: frontend
   replicas: 1
   template:
     metadata:
       labels:
         app: demo
         tier: frontend
-        track: stable
     spec:
       containers:
-        - name: nginx
+        - name: frontend
           image: "achalise/demo-frontend"
           ports:
           - containerPort: 80
