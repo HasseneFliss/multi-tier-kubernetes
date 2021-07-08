@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app: demo
+        app: frontend
         tier: frontend
     spec:
       containers:
@@ -28,7 +28,7 @@ spec:
     - port: 8888
       targetPort: 80
   selector:
-    app: demo
+    app: frontend
     tier: frontend
   type: NodePort
 
