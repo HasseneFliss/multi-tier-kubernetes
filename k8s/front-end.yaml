@@ -31,4 +31,26 @@ spec:
     app: frontend
     tier: frontend
   type: ClusterIP
+  
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: fullstackapp
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: "letsencrypt-cluster-issuer"
+spec:
+  #tls:
+  #- hosts:
+  #  - hello-kubernetes-stg.com 
+  #  secretName: example-app-tls
+  rules:
+  - host: fullstackapp.com  
+    http:
+      paths:
+      - path: /api/users
+        backend:
+          serviceName: backend
+          servicePort: 8080
 
