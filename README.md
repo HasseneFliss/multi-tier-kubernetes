@@ -1,3 +1,11 @@
+# Note by Hassene
+This project is deployed on aks 
+This project pipeline is not working yet
+This project purpose is to demonstrate the connection between frontend and backend and db.
+Namespace used in this project is fullstack-app-demo2 (do not get confused with fullstack-app-demo)
+To insert data in the db exec into the pod and then run mongo and then insert/delete your records then use your url (https://fullstackapp.com/api/users)to display the result.
+The ingress and dns problem is resolved locally.
+
 # multi-tier-kubernetes
 Angular front end on nginx, SpringBoot APIs and MongoDB
 
