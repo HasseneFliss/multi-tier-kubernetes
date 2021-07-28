@@ -7,7 +7,8 @@ To insert data in the db exec into the pod and then run mongo and then insert/de
 The ingress and dns problem is resolved locally.
 
 # multi-tier-kubernetes
-Angular front end on nginx, SpringBoot APIs and MongoDB
+Angular front end on nginx, SpringBoot APIs and MongoDB.
+
 Angular front end served by nginx , communication with SpringBoots via API which is connected to MongoDB 
 
 ## Preparation
